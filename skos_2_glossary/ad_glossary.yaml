@@ -1,0 +1,1042 @@
+version: 1
+source: Datahub
+owners:
+  users:
+  - id/di
+url: https://provincienh.github.io/OTL/otl-doc/
+nodes:
+- name: Areaaldata begrippenkader
+  description: SKOS begrippenkader behorende bij het Areaaldata model van Provincie
+    Noord-Holland
+  terms:
+  - name: adres
+    description: Een object met adresgegevens, om naar te verwijzen vanuit kunstwerken,
+      vri_; en ovl_kasten
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/adres
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/adres
+  - name: bak
+    description: Object met een permanent karakter dat dient om iets in op te bergen
+      of te verzamelen.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bak
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Bak
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bak
+  - name: begroeidTerreindeel
+    description: Kleinste functioneel onafhankelijk stukje van een terrein dat er
+      binnen het objecttype Terrein van NEN 3610 wordt onderscheiden, met aaneengesloten
+      vegetatie. Minus de specifieke objecten die PNH geadministreerd wil hebben in
+      begroeidTerreindeelBerm_v en begroeidTerreindeelPlantvak_v
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeel
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/BegroeidTerreindeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeel
+    contains:
+    - Areaaldata begrippenkader.begroeidTerreindeelBerm
+  - name: begroeidTerreindeel
+    description: Kleinste functioneel onafhankelijk stukje van een terrein dat er
+      binnen het objecttype Terrein van NEN 3610 wordt onderscheiden, met aaneengesloten
+      vegetatie. Minus de specifieke objecten die PNH geadministreerd wil hebben in
+      begroeidTerreindeelBerm_v en begroeidTerreindeelPlantvak_v
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeel
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/BegroeidTerreindeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeel
+    contains:
+    - Areaaldata begrippenkader.begroeidTerreindeelPlantvak
+  - name: begroeidTerreindeelBerm
+    description: 'Een ecologische berm met een vegetatie van grassen en kruiden. BGT
+      Begroeid Terreindeel, verbijzonderd naar fysiek voorkomen groenvoorziening:
+      gras- en kruidachtigen. Deze berm ligt verder dan 3 meter van een provinciale
+      weg. Bermen dichter dan 3 meter bij een provinciale weg worden vastgelegd in
+      ondersteunendWegdeel_v.'
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeelBerm
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/BegroeidTerreindeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeelBerm
+    inherits:
+    - Areaaldata begrippenkader.begroeidTerreindeel
+  - name: begroeidTerreindeelBermKr
+    description: 'Lijngeometrie van de hoogstgelegen begrenzing van een kunstmatig
+      aangelegd en onderhouden helling. Let op: Kruinlijnen zijn gerelateerd aan hun
+      respectievelijke objecten middels een relatie op IDENTIFICATIE met IDENTIFICATIE'
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeelBermKr
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/BegroeidTerreindeelKruin
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeelBermKr
+  - name: begroeidTerreindeelKruin
+    description: Lijngeometrie van de hoogstgelegen begrenzing van een kunstmatig
+      aangelegd en onderhouden helling.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeelKruin
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/BegroeidTerreindeelKruin
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeelKruin
+  - name: begroeidTerreindeelPlKr
+    description: 'Lijngeometrie van de hoogstgelegen begrenzing van een kunstmatig
+      aangelegd en onderhouden helling. Let op: Kruinlijnen zijn gerelateerd aan hun
+      respectievelijke objecten middels een relatie op IDENTIFICATIE met IDENTIFICATIE'
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeelPlKr
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/BegroeidTerreindeelKruin
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeelPlKr
+  - name: begroeidTerreindeelPlantvak
+    description: Terreindeel met aangelegde beplanting, meestal planten, heesters
+      of struiken. BGT Begroeid Terreindeel.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeelPlantvak
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/BegroeidTerreindeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/begroeidTerreindeelPlantvak
+    inherits:
+    - Areaaldata begrippenkader.begroeidTerreindeel
+  - name: beheergrenzen
+    description: "De beheergrens bakent de publiekrechtelijke zeggenschap en verantwoordelijkheid\
+      \ van de provincie over hetareaal af. Zo wordt duidelijk tot hoever de provincie\
+      \ krachtens de Omgevingswet, de Waterwet en de\r\r\nWegenverkeerswet 1994 beheerder\
+      \ is van de provinciale (vaar)wegen. Ook regelt de beheergrens tot hoever de\r\
+      \r\nprovinciale bevoegdheid reikt bij het treffen van maatregelen, het al dan\
+      \ niet toestaan van handelingen van\r\r\nderden, of juist het gedogen van situaties\
+      \ die van invloed zijn op de toestand of het gebruik van de (vaar)weg.\r\r\n\
+      Daarnaast geeft de beheergrens aan tot hoever de provincie met haar Omgevingsverordening,\r\
+      \r\nWaterverordening en Wegenverordening de publiekrechtelijke nadere regels\
+      \ voor de provinciale (vaar)wegen\r\r\nvoor kan schrijven. Daarmee regelt de\
+      \ beheergrens eenduidigheid en transparantie over het beheer. Dit om te\r\r\n\
+      behoeden voor nadelige gevolgen voor beheerbaarheid, doorstroming en veiligheid\
+      \ van activiteiten op of rond\r\r\nde infrastructuur.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/beheergrenzen
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/beheergrenzen
+  - name: beschoeiingInspectie
+    description: "Inspectieobject met alle inspectiegegevens die ingewonnen zijn m.b.t.\
+      \ beschoeiingen(landschap en milieu)\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/beschoeiingInspectie
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/beschoeiingInspectie
+  - name: bodem
+    description: Bodem van een waterdeel, hier worden de gegevens bijgehouden die
+      van belang zijn voor o.a. baggeren
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bodem
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bodem
+  - name: bord
+    description: "Een paneel waarop informatie wordt afgebeeld. Dit zijn zowel RVV\
+      \ borden als matrix borden (voor automobilisten);  DRIP panelen zijn in Areaaldata\
+      \ te vinden als matrix borden met een TOPdesk ID__LET OP:__ Bebording voor scheepvaartverkeer,\
+      \ wegwijzers, zwemwaterbebording en DRIS Panelen (voor OV reizigers) worden\
+      \ apart geadministreerd.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bord
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Bord
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bord
+    contains:
+    - Areaaldata begrippenkader.bordDRIS
+  - name: bord
+    description: "Een paneel waarop informatie wordt afgebeeld. Dit zijn zowel RVV\
+      \ borden als matrix borden (voor automobilisten);  DRIP panelen zijn in Areaaldata\
+      \ te vinden als matrix borden met een TOPdesk ID__LET OP:__ Bebording voor scheepvaartverkeer,\
+      \ wegwijzers, zwemwaterbebording en DRIS Panelen (voor OV reizigers) worden\
+      \ apart geadministreerd.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bord
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Bord
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bord
+    contains:
+    - Areaaldata begrippenkader.bordScheepvaart
+  - name: bord
+    description: "Een paneel waarop informatie wordt afgebeeld. Dit zijn zowel RVV\
+      \ borden als matrix borden (voor automobilisten);  DRIP panelen zijn in Areaaldata\
+      \ te vinden als matrix borden met een TOPdesk ID__LET OP:__ Bebording voor scheepvaartverkeer,\
+      \ wegwijzers, zwemwaterbebording en DRIS Panelen (voor OV reizigers) worden\
+      \ apart geadministreerd.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bord
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Bord
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bord
+    contains:
+    - Areaaldata begrippenkader.bordWegwijzer
+  - name: bord
+    description: "Een paneel waarop informatie wordt afgebeeld. Dit zijn zowel RVV\
+      \ borden als matrix borden (voor automobilisten);  DRIP panelen zijn in Areaaldata\
+      \ te vinden als matrix borden met een TOPdesk ID__LET OP:__ Bebording voor scheepvaartverkeer,\
+      \ wegwijzers, zwemwaterbebording en DRIS Panelen (voor OV reizigers) worden\
+      \ apart geadministreerd.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bord
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Bord
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bord
+    contains:
+    - Areaaldata begrippenkader.bordZwemwater
+  - name: bordDRIS
+    description: Een DRIS paneel (voor OV reizigers)
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bordDRIS
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bordDRIS
+    inherits:
+    - Areaaldata begrippenkader.bord
+  - name: bordScheepvaart
+    description: Een paneel waarop informatie wordt afgebeeld, specifiek bedoelt voor
+      de scheepvaart.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bordScheepvaart
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Bord
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bordScheepvaart
+    inherits:
+    - Areaaldata begrippenkader.bord
+  - name: bordWegwijzer
+    description: "Constructie voorzien van een of meer panelen met informatie ten\
+      \ behoeve van de bewegwijzering.Let op: dit betreft bewegwijzering voor objecten\
+      \ (zoals 'zwembad' of 'hotel') en voor doelen (zoals 'Uitgeest').\r\r\nBorden\
+      \ die bij de Nationale Bewegwijzeringsdienst worden geregistreerd kunnen, gegroepeerd,\
+      \ onder een bordWegwijzer object worden geregistreerd in Areaaldata met vermelding\
+      \ in het veld 'OPMERKING'\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bordWegwijzer
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Bord
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bordWegwijzer
+    inherits:
+    - Areaaldata begrippenkader.bord
+  - name: bordZwemwater
+    description: Een paneel waarop informatie wordt afgebeeld ten behoeve van zwemwater
+      locaties.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bordZwemwater
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Bord
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bordZwemwater
+    inherits:
+    - Areaaldata begrippenkader.bord
+  - name: bouwdeelGeluidsscherm
+    description: Laagste niveau van decompositie van geluidwerende voorziening via
+      geluidwerende constructie. Het begrip NEN Bouwdeel is niet gedefinieerd.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bouwdeelGeluidsscherm
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bouwdeelGeluidsscherm
+  - name: bouwdeelKunstwerk
+    description: Laagste niveau van decompositie van kunstwerk_vast via kwElement.
+      Het begrip NEN Bouwdeel is niet gedefinieerd.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bouwdeelKunstwerk
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bouwdeelKunstwerk
+  - name: bouwdeelOevervak
+    description: Laagste niveau van decompositie van scheidingWater_l. Het begrip
+      NEN Bouwdeel is niet gedefinieerd.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bouwdeelOevervak
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/bouwdeelOevervak
+  - name: buis
+    description: "Holle leiding voor het doorstromen van gassen, vloeistoffen of capsules,\
+      \ bestemd om hetzij gas,een vloeistof of capsules te transporteren, hetzij een\
+      \ vloeistof als intermediair te gebruiken voor het transport van\r\r\nwarmte\
+      \ of een opgeloste of verpulverde stof. NB. Bij PNH eigenlijk alleen gebruikt\
+      \ voor riolering.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/buis
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/buis
+  - name: concessieverlener
+    description: Verlener van de [Concessie]
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/concessieverlener
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/concessieverlener
+  - name: crowInspectie
+    description: "Een inspectie geeft een momentopname weer hoe een wegvakonderdeel\
+      \ er op dat moment bij ligt; deCROW-norm wordt gebruikt. Het object Inspectie\
+      \ is bedoelt om de algemene gegevens van een inspectie 'ronde' vast te leggen.\r\
+      \r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/crowInspectie
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/crowInspectie
+  - name: crowInspectieresultaat
+    description: "Een inspectie geeft een momentopname weer hoe een PNH wegvakonderdeel\
+      \ er op dat moment bijligt. DeCROW norm wordt gebruikt. Het object Inspectieresultaat\
+      \ is bedoelt om de inspectie resultaten van een bepaalt\r\r\nwegvakonderdeel\
+      \ vast te leggen.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/crowInspectieresultaat
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/crowInspectieresultaat
+  - name: crowMeting
+    description: 'Een inspectie geeft een momentopname weer hoe een PNH wegvakonderdeel
+      er op dat moment bijligt. De CROW norm wordt gebruikt. Het object Meting is
+      bedoelt om de Metingen van een bepaalt wegvakonderdeel vast te leggen. Metingen
+      zijn: langsonvlakheid, stroefheid, zetting, spoorvorming, comfortindex'
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/crowMeting
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/crowMeting
+  - name: doorvaartmaat
+    description: Aanduiding van Doorvaarthoogte bij bijv. Kunstwerken
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/doorvaartmaat
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/doorvaartmaat
+  - name: ecoHoofdstructuur
+    description: De ecologische hoofdstructuur is een samenhangend netwerk van bestaande
+      en nog te ontwikkelen belangrijke natuurgebieden. Met dit vlak wordt het gebied
+      afgebakend wat als EHS wordt aangemerkt.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ecoHoofdstructuur
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ecoHoofdstructuur
+  - name: ecoVerbZone
+    description: De ecologische hoofdstructuur is een samenhangend netwerk van bestaande
+      en nog te ontwikkelen belangrijke natuurgebieden. Met dit vlak wordt het gebied
+      afgebakend wat als Verbindigszone wordt aangemerkt.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ecoVerbZone
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ecoVerbZone
+  - name: ecopassage
+    description: Een passage onder of boven een weg voor dieren. Behoort toe aan een
+      faunavoorziening.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ecopassage
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ecopassage
+  - name: electriciteitskabel
+    description: 'Een aansluiting of reeks aansluitingen van een nutsvoorzieningennet
+      voor het overbrengen van elektriciteit van de ene locatie naar een andere. (Bron:
+      INSPIRE)'
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/electriciteitskabel
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/electriciteitskabel
+  - name: faunavoorziening
+    description: "Een faunavoorziening is een voorziening die het passeren door dieren\
+      \ van infrastructuur geleidt, bevordert of juist voorkomt (bron: Leidraad Faunavoorzieningen\
+      \ bij Infrastructuur).[Leidraad faunavoorzieningen](https://www.mjpo.nl/downloads/203/leidraad-2013-hoofddocument[1].pdf)\r\
+      \r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/faunavoorziening
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/faunavoorziening
+  - name: fietsparkeervoorziening
+    description: Een duurzaam verankerd rek in de openbare ruimte voor het stallen
+      van fietsen. Voor Fietsenstallingen/kluizen wordt de omtrek van de constructie
+      als lijn vastgelegd.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/fietsparkeervoorziening
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/fietsparkeervoorziening
+  - name: functioneelGebied
+    description: Begrensd en benoemd gebied dat door een functionele eenheid beschreven
+      wordt.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/functioneelGebied
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/FunctioneelGebied
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/functioneelGebied
+  - name: gebiedscontractregio
+    description: Perceelsindeling t.b.v. de onderhoudsbestekken en contractregio's.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/gebiedscontractregio
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/gebiedscontractregio
+  - name: gebouwInstallatie
+    description: Een component aan de buitenzijde van een gebouw, die het aanzicht
+      van het gebouw mede bepaalt.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/gebouwInstallatie
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/GebouwInstallatie
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/gebouwInstallatie
+  - name: geluidwerendeVoorziening
+    description: "Onderdeel van een civiel-technisch werk voor de infrastructuur van\
+      \ wegen, water, spoorbanen, waterkeringen en/of leidingen. De NEN 2767-4 decompositie\
+      \ wordt gevolgd, waarbij GELUIDWERENDE_VOORZIENING als Beheerobject is aangemaakt\
+      \ om het element 'geluidwerende constructie' van een bovenliggend beheerobject\
+      \ te voorzien.Geluidwerende voorzieningen worden als zelfstandige objecten beheerd\
+      \ en niet als element van bv bruggen of wegen (zoals in de NEN 2767-4 beschreven).\r\
+      \r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/geluidwerendeVoorziening
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/geluidwerendeVoorziening
+  - name: halte
+    description: Het geheel van objecten behorende bij een stopplaats van een autobus.
+      (Integraal Gegevens Model Ideaal Areaal 1.2). STOPPLACE in NDOV terminologie
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/halte
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/halte
+  - name: installatie
+    description: Samenhangend systeem dat een bepaald doel dient. Bijv, zonnepaneel,
+      boorgat, pomp
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/installatie
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Installatie
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/installatie
+  - name: kast
+    description: Object met een permanent karakter dat dient om iets in te bergen
+      en te beschermen. __LET OP:__ OVL- en VRI-Kasten worden apart geadministreerd.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kast
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Kast
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kast
+    contains:
+    - Areaaldata begrippenkader.kastDRIS
+  - name: kast
+    description: Object met een permanent karakter dat dient om iets in te bergen
+      en te beschermen. __LET OP:__ OVL- en VRI-Kasten worden apart geadministreerd.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kast
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Kast
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kast
+    contains:
+    - Areaaldata begrippenkader.kastOvl
+  - name: kast
+    description: Object met een permanent karakter dat dient om iets in te bergen
+      en te beschermen. __LET OP:__ OVL- en VRI-Kasten worden apart geadministreerd.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kast
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Kast
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kast
+    contains:
+    - Areaaldata begrippenkader.kastVri
+  - name: kastDRIS
+    description: Kast ten behoeve van de regeling van DRIS panelen
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kastDRIS
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kastDRIS
+    inherits:
+    - Areaaldata begrippenkader.kast
+  - name: kastOvl
+    description: Kast ten behoeve van de regeling van de openbare verlichting.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kastOvl
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Kast
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kastOvl
+    inherits:
+    - Areaaldata begrippenkader.kast
+  - name: kastVri
+    description: Kast ten behoeve van de regeling van verkeerslichten
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kastVri
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Kast
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kastVri
+    inherits:
+    - Areaaldata begrippenkader.kast
+  - name: kleinehaltedisplay
+    description: "Kleine halte display: klein scherm dat actuele vertrektijden toont,\
+      \ maar daarnaast ook eenaudiovoorziening voor slechthorenden heefy Ã©n een stoplamp\
+      \ waarmee de reiziger in het donker de aandacht van de \r\r\nbuschauffeur kan\
+      \ trekken. Werkt op zonnecellen.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kleinehaltedisplay
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kleinehaltedisplay
+  - name: kruispunt
+    description: Kruisingen hebben een uniek nummer.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kruispunt
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kruispunt
+  - name: kunstwerk
+    description: 'Onderdeel van een civiel-technisch werk voor de infrastructuur van
+      wegen, water, spoorbanen, waterkeringen en/of leidingen. De NEN 2767-4 decompositie
+      wordt gevolgd. Dit is een samenvattende feature class van de vorige feature
+      classes: KunstwerkBeweegbaar_p, Kunstwerkvast_p en Schutsluis_p'
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kunstwerk
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kunstwerk
+  - name: kunstwerkdeel
+    description: Onderdeel van een civiel-technisch werk voor de infrastructuur van
+      wegen, water, spoorbanen, waterkeringen en/of leidingen met een breedte <30cm,
+      bijvoorbeeld een duiker.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kunstwerkdeel
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Kunstwerkdeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kunstwerkdeel
+  - name: kunstwerkdeel
+    description: Onderdeel van een civiel-technisch werk voor de infrastructuur van
+      wegen, water, spoorbanen, waterkeringen en/of leidingen met een breedte >30cm.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kunstwerkdeel
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Kunstwerkdeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kunstwerkdeel
+  - name: kunstwerkdeel
+    description: Onderdeel van een civiel-technisch werk voor de infrastructuur van
+      wegen, water, spoorbanen, waterkeringen en/of leidingen. Bijvoorbeeld voetpunten
+      van een elektriciteitsmast.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kunstwerkdeel
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Kunstwerkdeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kunstwerkdeel
+  - name: kwElement
+    description: "Een NEN Element is gedefinieerd als \"een samenstel van bouwdelen\
+      \ die tezamen een afzonderlijk herkenbaarcomponent van een beheerobject vormen\"\
+      . Een NEN Element kan afhankelijk van het beheerobject waar deze bij hoort\r\
+      \r\ngemodelleerd zijn als ELEMENT of GELUIDWERENDE_CONSTRUCTIE. \r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kwElement
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/kwElement
+  - name: lamp
+    description: component in een lantaarn of armatuur met als functie verlichten.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/lamp
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/lamp
+  - name: lantaarn
+    description: De lichten van een verkeersregelinstallatie samen met het achtergrondschild
+      en de zonnekappen
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/lantaarn
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/lantaarn
+  - name: leidingelement
+    description: Een ondergronds object dat bij een leiding of een themakaart hoort.
+      __LET OP:__ dit is het objecttype waar kolken etc. in vastgelegd worden!
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/leidingelement
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Put
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/leidingelement
+  - name: ligplaatsstrook
+    description: Een Ligplaatsstrook is een gebied waar ligplaatsen toegestaan zijn
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ligplaatsstrook
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ligplaatsstrook
+  - name: mantelbuis
+    description: Een mantelbuis is een buis bestemd voor de doorvoer en bescherming
+      van kabels
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/mantelbuis
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/mantelbuis
+  - name: mastDraagconstructie
+    description: Hoge draagconstructie, vervaardigd van metaal, hout, steen of kunststof
+      dat dient om iets te dragen.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/mastDraagconstructie
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Mast
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/mastDraagconstructie
+  - name: oeverReparatie
+    description: Een lokale reparatie aan een oevervak
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/oeverReparatie
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/oeverReparatie
+  - name: oevervak
+    description: Een Oevervak is de rand van een kanaal, vaarweg of rivier. Het begint
+      bij bodem van het nautisch profiel en gaat door tot 1m achter de oeverconstructie.
+      __NB:__ Dit is het equivalent van Beheerobject bij Vaarwegen conform de NEN
+      2767-4 Decompositie. Een oevervak is ongeveer 100 meter lang en bestaat uit
+      een uniforme oeverconstructie. De Oeverconstructie zelf is vastgelegd in [AREAALDATA.scheidingWater_l]
+      en [AREAALDATA.bouwdeelOevervak_tbl]
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/oevervak
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/oevervak
+  - name: onbegroeidTerreindeel
+    description: "Kleinste functioneel onafhankelijk stukje van een terrein, dat er\
+      \ binnen het objecttype Terrein van NEN 3610 wordt onderscheiden, zonder aaneengesloten\
+      \ vegetatie.                 Alle vlakken die geen vegetatie bedekking hebben\
+      \ en geen (ondersteunend) wegdeel, waterdeel of bouwwerk zijn. __LET OP:__ Oeverbescherming\
+      \ (zoals basaltblokken) langs vaarwegen niet zijnde damwanden, kademuren of\
+      \ walbescherming worden zowel in dit objecttype geadministreerd alswel (indien\
+      \ van toepassing) in de NEN2767-4 decompositie in scheidingWater_l.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/onbegroeidTerreindeel
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/OnbegroeidTerreindeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/onbegroeidTerreindeel
+  - name: onbegroeidTerreindeelKruin
+    description: Lijngeometrie van de hoogstgelegen begrenzing van een kunstmatig
+      aangelegd en onderhouden helling.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/onbegroeidTerreindeelKruin
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/OnbegroeidTerreindeelKruin
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/onbegroeidTerreindeelKruin
+  - name: onderdeel
+    description: Component bij een mast, zoals een voorschakelapparaat, drukknop,rateltikker,
+      windmeter, gms onderdeel
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/onderdeel
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/onderdeel
+  - name: ondersteunendWaterdeel
+    description: Object dat in het kader van de waterhuishouding periodiek gedeeltelijk
+      of geheel met water is bedekt. Een vegetatie van voornamelijk riet en andere
+      soorten langs een waterloop. In breedte variabel van 0,50 tot 3,00 meter.  De
+      Provincie heeft voornamelijk oevers en slootkanten in het areaal. Oevers en
+      slootkanten zijn de delen die enerzijds begrensd worden door de waterlijn en
+      anderzijds door een kant insteek. Een kantinsteek heeft altijd een bijbehorende
+      taludlijn en hoeft niet te worden ingetekend.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ondersteunendWaterdeel
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/OndersteunendWaterdeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ondersteunendWaterdeel
+  - name: ondersteunendWegdeel
+    description: Een deel van de weg dat niet primair bedoeld is voor gebruik door
+      het verkeer. Dit omvat o.a. verkeerseiland en berm daar waar de berm onderdeel
+      uitmaakt van de constructie van de weg. Indien eeen berm geen onderdeel uitmaakt
+      van de constructie van de weg, en verder dan 3 meter van een provinciale weg
+      ligt, wordt deze vastgelegd in begroeidTerrteindeelBerm_v.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ondersteunendWegdeel
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/OndersteunendWegdeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ondersteunendWegdeel
+  - name: ondersteunendWegdeelKruin
+    description: Lijngeometrie van de hoogstgelegen begrenzing van een kunstmatig
+      aangelegd en onderhouden helling.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ondersteunendWegdeelKruin
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/OndrsteunendWegdeelKruin
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ondersteunendWegdeelKruin
+  - name: ongeclassificeerdObject
+    description: Object waarvoor geen bronhouder aangewezen is en/of dat niet nader
+      is geclassificeerd. Er mogen geen nieuwe objecten van dit objecttype worden
+      aangemaakt/aangeleverd.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ongeclassificeerdObject
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/OndrsteunendWegdeelKruin
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/ongeclassificeerdObject
+  - name: overbruggingsdeel
+    description: Onderdeel van een beweegbare of vaste verbinding tussen twee punten,
+      die door water, een weg of anderszins gescheiden zijn, dat essentieel is voor
+      de constructie .
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/overbruggingsdeel
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Overbruggingsdeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/overbruggingsdeel
+  - name: overigBouwwerk
+    description: Met de aarde verbonden duurzaam bouwwerk, dat niet valt onder de
+      definities van een pand of kunstwerk.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/overigBouwwerk
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/overigBouwwerk
+  - name: overigeScheiding
+    description: Kunstmatig, meestal lineair obstakel met een werende functie, met
+      kleinere afmetingen dan toegestaan voor opname in de BGT
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/overigeScheiding
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/OverigeScheiding
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/overigeScheiding
+  - name: paalAfbakening
+    description: Paal; Langwerpig stuk hout, ijzer, steen enz., dat in de grond staat.
+      __LET OP:__ Areaaldata maakt onderscheidt in objecten die een primaire functie
+      hebben als draagconstructie, deze worden in paalDraagconstructie_P of mastDraagconstructie_p
+      geadministreerd. Objecten die primair bedoelt zijn om iets af te bakenen worden
+      in dit objecttype geadministreerd. Dit zijn o.a. Bermplanken, Indexeringspalen
+      en Schamppalen. ![Bermplank](D:\bu_geodata_beheer\gereedschap\documentatie\areaaldata_datamodel\4.2d3\Objectbladen\06_Meubilair\bermplank.png)
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/paalAfbakening
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Paal
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/paalAfbakening
+  - name: paalDraagconstructie
+    description: Hoge draagconstructie, vervaardigd van metaal, hout, steen of kunststof
+      dat dient om iets te dragen. __LET OP:__ In dit objecttype worden de IMGEO palen
+      geadministreerd die primair een dragende functie hebben, zoals lichtmast, verkeersregelinstallatiepaal,
+      verkeersbordpaal en haltepaal.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/paalDraagconstructie
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Paal
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/paalDraagconstructie
+  - name: pand
+    description: Een PAND is de kleinste bij de totstandkoming functioneel en bouwkundig-constructief
+      zelfstandige eenheid die direct en duurzaam met de aarde is verbonden en betreedbaar
+      en afsluitbaar is.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/pand
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Pand
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/pand
+  - name: pandHuisnummerreeks
+    description: Bevat de reeks nummeraanduidingen behorend bij het pand ten behoeve
+      van visualisatie.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/pandHuisnummerreeks
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/PandHuisnummerreeks
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/pandHuisnummerreeks
+  - name: peilbuis
+    description: Peilbuis tbv opname grondwaterstanden.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/peilbuis
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/peilbuis
+  - name: perron
+    description: Kleinste functioneel onafhankelijk stuk van een NEN 3610 Weg met
+      gelijkblijvende, homogene eigenschappen en relaties en primair bedoeld voor
+      gebruik door weg-, spoor- en vliegverkeer te land. __LET OP:__ In dit objecttype
+      worden een kopie van wegdeel_v met BGTPlustype Voetpad opgenomen die als perron
+      bij een bushalte in gebruik is. ![Perron illustratie](D:\bu_geodata_beheer\gereedschap\documentatie\areaaldata_datamodel\4.2d3\Objectbladen\08_Haltes\perron.jpg)
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/perron
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Wegdeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/perron
+  - name: put
+    description: Gegraven of geboorde kokervormige diepte waarin zich (vloei)stoffen
+      bevinden. __LET OP:__ In dit objecttype worden alleen die objecten geadministreerd
+      die __GEEN__ onderdeel uitmaken van een netwerk. Omdat deze definitie arbitrair
+      is, maakt het attribuut appurtenancetype voorlopig gebruik van dezelfde domeinwaarden.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/put
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Put
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/put
+  - name: recreatieplek
+    description: Terrein ingericht voor recreatief medegebruik
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/recreatieplek
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/recreatieplek
+  - name: scheiding
+    description: Kunstmatig, meestal lineair obstakel met een werende functie, dat
+      een breedte heeft van < 0,3 m.. __LET OP:__ geluidsscherm wordt geadministreerd
+      in het objecttype scheidingGeluidsscherm_l. damwand, kademuur en walbescherming
+      van vaarwegen worden geadministreerd in scheidingWater_l.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheiding
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Scheiding
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheiding
+    contains:
+    - Areaaldata begrippenkader.scheidingGeleidewand
+  - name: scheiding
+    description: Kunstmatig, meestal lineair obstakel met een werende functie, dat
+      een breedte heeft van < 0,3 m.. __LET OP:__ geluidsscherm wordt geadministreerd
+      in het objecttype scheidingGeluidsscherm_l. damwand, kademuur en walbescherming
+      van vaarwegen worden geadministreerd in scheidingWater_l.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheiding
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Scheiding
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheiding
+    contains:
+    - Areaaldata begrippenkader.scheidingGeluidsscherm
+  - name: scheiding
+    description: Kunstmatig, meestal lineair obstakel met een werende functie, dat
+      een breedte heeft van < 0,3 m.. __LET OP:__ geluidsscherm wordt geadministreerd
+      in het objecttype scheidingGeluidsscherm_l. damwand, kademuur en walbescherming
+      van vaarwegen worden geadministreerd in scheidingWater_l.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheiding
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Scheiding
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheiding
+    contains:
+    - Areaaldata begrippenkader.scheidingWater
+  - name: scheiding
+    description: "Kunstmatig, meestal lineair obstakel met een werende functie, dat\
+      \ een breedte heeft van > 0,3 m.\r\r\nKan voor oeverconstructies dienen als\
+      \ NEN Element: een samenstel van bouwdelen die tezamen een afzonderlijk herkenbaar\
+      \ \r\r\ncomponent van een beheerobject vormen' __LET OP:__ Dit is het objecttype\
+      \ waar de NEN 2767-4 decompositie van een oevervak in geadministreerd wordt\
+      \ voor de (BGT) types kademuur, damwand en walbescherming,\r\r\nmet een breedte\
+      \ van > 0,3 m. Indien het element smaller is, dient deze ondergebracht te worden\
+      \ in scheidingWater_l.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheiding
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Scheiding
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheiding
+    contains:
+    - Areaaldata begrippenkader.scheidingGeleidewand
+  - name: scheiding
+    description: "Kunstmatig, meestal lineair obstakel met een werende functie, dat\
+      \ een breedte heeft van > 0,3 m.\r\r\nKan voor oeverconstructies dienen als\
+      \ NEN Element: een samenstel van bouwdelen die tezamen een afzonderlijk herkenbaar\
+      \ \r\r\ncomponent van een beheerobject vormen' __LET OP:__ Dit is het objecttype\
+      \ waar de NEN 2767-4 decompositie van een oevervak in geadministreerd wordt\
+      \ voor de (BGT) types kademuur, damwand en walbescherming,\r\r\nmet een breedte\
+      \ van > 0,3 m. Indien het element smaller is, dient deze ondergebracht te worden\
+      \ in scheidingWater_l.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheiding
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Scheiding
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheiding
+    contains:
+    - Areaaldata begrippenkader.scheidingGeluidsscherm
+  - name: scheiding
+    description: "Kunstmatig, meestal lineair obstakel met een werende functie, dat\
+      \ een breedte heeft van > 0,3 m.\r\r\nKan voor oeverconstructies dienen als\
+      \ NEN Element: een samenstel van bouwdelen die tezamen een afzonderlijk herkenbaar\
+      \ \r\r\ncomponent van een beheerobject vormen' __LET OP:__ Dit is het objecttype\
+      \ waar de NEN 2767-4 decompositie van een oevervak in geadministreerd wordt\
+      \ voor de (BGT) types kademuur, damwand en walbescherming,\r\r\nmet een breedte\
+      \ van > 0,3 m. Indien het element smaller is, dient deze ondergebracht te worden\
+      \ in scheidingWater_l.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheiding
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Scheiding
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheiding
+    contains:
+    - Areaaldata begrippenkader.scheidingWater
+  - name: scheidingGeleidewand
+    description: Een kunststof of betonnen wand die dieren naar een ecopassage leidt.
+      Behoort toe aan een faunavoorziening.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheidingGeleidewand
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheidingGeleidewand
+    inherits:
+    - Areaaldata begrippenkader.scheiding
+  - name: scheidingGeluidsscherm
+    description: Kunstmatig, meestal lineair obstakel met een werende functie. __LET
+      OP:__ Dit is het element niveau van de NEN 2767-4 decompositie van geluidwerende
+      Voorzieningen __EN__ het BGT objecttype.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheidingGeluidsscherm
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Scheiding
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheidingGeluidsscherm
+    inherits:
+    - Areaaldata begrippenkader.scheiding
+  - name: scheidingWater
+    description: "Een NEN Element is gedefinieerd als 'een samenstel van bouwdelen\
+      \ die tezamen een afzonderlijk herkenbaarcomponent van een beheerobject vormen'.\
+      \ __LET OP:__ Dit is het objecttype waar de NEN 2767-4 decompositie van een\
+      \ oevervak in geadministreerd wordt voor de (BGT) types kademuur, damwand en\
+      \ walbescherming. Wanneer de breedte aan het oppervlak >0,3 m bedraagt dient\
+      \ zowel de lijn scheidingWater_l als een scheiding_v worden ingetekend.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheidingWater
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Scheiding
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/scheidingWater
+    inherits:
+    - Areaaldata begrippenkader.scheiding
+  - name: sensor
+    description: Apparaat voor de meting van een fysieke grootheid (bijv. temperatuur,
+      licht, druk, elektriciteit). __LET OP:__ Snelheids camera's/roodlicht camera's
+      zijn niet van de Provincie en worden NIET geregistreerd.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/sensor
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Sensor
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/sensor
+  - name: sensor
+    description: Een fysiek detectiesysteem bestaande uit wikkelingen (lussen) in
+      het wegdek bijvoorbeeld voor het beÃ¯nvloeden van de regeling van verkeerslichten
+      of een virtueel detectieveld van een videodetector of radardetector, gebruikt
+      voor het beÃ¯nvloeden van regelingen van verkeerslichten ![Lus](D:\bu_geodata_beheer\gereedschap\documentatie\areaaldata_datamodel\4.2d3\Objectbladen\04_Ovl_Vri\lus_1.png)
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/sensor
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Sensor
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/sensor
+  - name: spoor
+    description: De as van het spoor, dat wil zeggen het midden van twee stalen staven
+      op een onderling vaste afstand, waarover trein, tram, of sneltram rijdt. __LET
+      OP:__ Dit is het officiele BGT objecttype. spoorrail_l is het 'oude' objecttype
+      wat op termijn uitgefaseerd zal worden.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/spoor
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Spoor
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/spoor
+  - name: spoorrail
+    description: Twee stalen staven op een onderling vaste afstand waarover trein,
+      tram, metro of kraan rijden. __LET OP:__ Dit is het 'oude' objecttype wat op
+      termijn uitgefaseerd zal worden. spoor_l is het BGT objecttype.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/spoorrail
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/spoorrail
+  - name: straatmeubilair
+    description: Een ruimtelijk object ter inrichting van de openbare ruimte. __LET
+      OP:__ in afwijking op de BGT/IMGEO indeling worden lichtpunten in straatmeubilairLichtpunt_p.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/straatmeubilair
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Straatmeubilair
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/straatmeubilair
+    contains:
+    - Areaaldata begrippenkader.straatmeubilairAbri
+  - name: straatmeubilair
+    description: Een ruimtelijk object ter inrichting van de openbare ruimte. __LET
+      OP:__ in afwijking op de BGT/IMGEO indeling worden lichtpunten in straatmeubilairLichtpunt_p.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/straatmeubilair
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Straatmeubilair
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/straatmeubilair
+    contains:
+    - Areaaldata begrippenkader.straatmeubilairLichtpunt
+  - name: straatmeubilairAbri
+    description: "Een abri, gerepresenteerd als punt.![Abri illustratie](D:\\bu_geodata_beheer\\\
+      gereedschap\\documentatie\\areaaldata_datamodel\\4.2d3\\Objectbladen\\08_Haltes\\\
+      abri.jpg)\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/straatmeubilairAbri
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/OverigBouwwerk
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/straatmeubilairAbri
+    inherits:
+    - Areaaldata begrippenkader.straatmeubilair
+  - name: straatmeubilairLichtpunt
+    description: in afwijking op de BGT/IMGEO indeling worden lichtpunten in dit objecttype
+      geadministreerd. Het betreft hier armaturen en markeringsunits.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/straatmeubilairLichtpunt
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Straatmeubilair
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/straatmeubilairLichtpunt
+    inherits:
+    - Areaaldata begrippenkader.straatmeubilair
+  - name: telecommunicatiekabel
+    description: 'Een aansluiting of reeks aansluitingen van een nutsvoorzieningennet
+      voor het overbrengen van signaalinformatie van de ene locatie naar een andere.
+      (Bron: INSPIRE)'
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/telecommunicatiekabel
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/telecommunicatiekabel
+  - name: terugkeervoorziening
+    description: "een voorziening in een raster of geleidingswand waardoor fauna dat\
+      \ aan de wegkant van het raster/de geleidingswand staat weer aan de andere kant\
+      \ van het raster/de geleidingswand kan komen, maar waarbij dezelfde faunasoort\
+      \ aan de niet-wegkant niÃ©t het raster/de geleidingswand kan passeren om de\
+      \ weg op te komen.Een faunaterugkeervoorziening kan geschikt zijn voor Ã©Ã©n\
+      \ of meerdere faunasoorten. Voorbeelden van faunaterugkeervoorzieningen in raster\
+      \ of geleidingswand zijn:\r\r\n-\tTerugspringvoorzieningen voor reeÃ«n (zie\
+      \ afbeelding);\r\r\n-\tKlapluik voor das (zie afbeelding).\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/terugkeervoorziening
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/terugkeervoorziening
+  - name: theorHectometrering
+    description: Hectometrering (indexeringspunten) van de wegen, vaarwegen en OV-trajecten
+      in beheer bij de PNH.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/theorHectometrering
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/theorHectometrering
+  - name: traject
+    description: "Een abstract functioneel gebied rondom een weg of vaarweg dat onder\
+      \ de verantwoordelijkheid van de provincie Noord-Holland valt. Richtlijnen voor\
+      \ omvang van een wegtraject:    + Een traject start/eindigt bij een eigendoms/beheergrens\
+      \ + Een traject start/eindigt bij een aansluiting op een weg van een hogere\
+      \ orde. Fietspaden vormen een ander traject (AD_ID) met eenzelfde nummer.\r\r\
+      \n    + Een traject start/eindigt op een weg van een gelijke orde. Richtlijn\
+      \ voor omvang vaarwegtraject:\r\r\nhet gebied dat is gedefinieerd in de vaarwegverordening\
+      \ (breedte) en een\r\r\nlogisch doorvaartraject (lengte). In Areaaldata behoren\
+      \ tot een traject alle (beheer)objecten van de provincie Noord-Holland die binnen\
+      \ de beheergrenzen\r\r\nvan het traject liggen.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/traject
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/traject
+  - name: tunneldeel
+    description: Onderdeel van een kunstmatig aangelegde, kokervormige onderdoorgang
+      dat essentieel is voor de constructie.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/tunneldeel
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Tunneldeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/tunneldeel
+  - name: uithouder
+    description: Een uithouder bevestigd aan een verlichtingsmast maakt het mogelijk
+      om een daarvoor geschikt armatuur excentrisch van de mast te plaatsen zodat
+      er een optimale lichtopbrengst gehaald wordt.(http://www.wegenwiki.nl/Uithouder)
+      __NB:__ Als het een enkelvoudige lichtmast betreft worden de uithouder gegevens
+      bij de draagconstructie vastgelegd.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/uithouder
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/uithouder
+  - name: uitleggerPortaal
+    description: "Uitlegger/Portaal is het lijnvormige element van een uitlegger of\
+      \ portaal. In het geval van een uitlegger bestaat het totaal uit 1 mast (object\
+      \ in paalDraagconstructie_p) en een object in uitleggerPortaal_l. In het geval\
+      \ van een portaal bestaat het geheel uit 2 masten (objecten in paalDraagconstructie_p)\
+      \ en een object in uitleggerPortaal_l. Aan een uitleggePortaal kunnen vervolgens\
+      \ lantaarns of armaturen gekoppeld zijn.\r\r\n![Portaal](D:\\bu_geodata_beheer\\\
+      gereedschap\\documentatie\\areaaldata_datamodel\\4.2d3\\Objectbladen\\04_Ovl_Vri\\\
+      portaal_uithouder.png)\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/uitleggerPortaal
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/uitleggerPortaal
+  - name: utiliteitsNet
+    description: Een verzameling netwerkelementen die tot 1 type nutsvoorzieningennet
+      behoren.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/utiliteitsNet
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/utiliteitsNet
+  - name: vaarweg
+    description: De as van de verschillende vaarwegen zoals verwerkt in de grootschalige
+      topografie.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vaarweg
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vaarweg
+  - name: vaarwegdeeltraject
+    description: "Vaarwegdeeltraject is een abstract functioneel gebied waarvande\
+      \ afmetingen zijn bepaald aan de hand van het geografisch\r\r\nbereik van de\
+      \ geldende beperking en de geldende functie\r\r\nzoals die is aangegeven door\
+      \ de beheerder of vanuit het\r\r\nbeheerplan. Het heeft geen vaste afmetingen\
+      \ maar past\r\r\naltijd binnen het vaarwegtraject.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vaarwegdeeltraject
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vaarwegdeeltraject
+  - name: vaarwegdeeltrajectas
+    description: As van de vaarwegdeeltrajecten
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vaarwegdeeltrajectas
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vaarwegdeeltrajectas
+  - name: vegetatieObject
+    description: "Een lijnvormige beplanting van struiken. In verschijningsvorm variabel\
+      \ in breedte en hoogte. Vlakken zijn onderdeel van BGT object Begroeid terreindeel.\r\
+      \r\n![Heg](D:\\bu_geodata_beheer\\gereedschap\\documentatie\\areaaldata_datamodel\\\
+      4.2d3\\Objectbladen\\05_Landschap_milieu\\heg.png)\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vegetatieObject
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/VegetatieObject
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vegetatieObject
+  - name: vegetatieObject
+    description: 'Een opgaande beplanting met een stam en boomkroon. Verschijningsvorm:
+      vrijuit groeiend, geknot of in gesnoeide vorm. Hoogte groter dan 1 meter en/of
+      stamdikte groter dan 5 centimeter'
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vegetatieObject
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/VegetatieObject
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vegetatieObject
+  - name: vegetatieObject
+    description: Vlakvormige groep gelijksoortige vegetatieobjecten met een beperkte
+      omvang. __LET OP:__ In principe wordt dit objecttype in areaaldata vooralsnog
+      niet gebruikt. Heggen worden als lijn geadministreerd in vegetatieObject_l,
+      plantvakken worden geadministreerd in begroeidTerreindeel_v.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vegetatieObject
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/VegetatieObject
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vegetatieObject
+  - name: vtaInspectie
+    description: Wettelijk verplichte inspectie van de veiligheid van bomen
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vtaInspectie
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/vtaInspectie
+  - name: waterdeel
+    description: Kleinste functioneel onafhankelijk stukje water met gelijkblijvende,
+      homogene eigenschappen en relaties dat er binnen het objecttype Water van NEN
+      3610 wordt onderscheiden en dat permanent met water bedekt is.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/waterdeel
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Waterdeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/waterdeel
+  - name: waterinrichtingselement
+    description: "Een ruimtelijk object ter inrichting van het water. Dit objecttype\
+      \ is bedoeld om alleenstaande geleide- of remmingswerken in op te nemen. Daar\
+      \ waar een geleide- of                remmingswerk onderdeel uitmaakt van een\
+      \ kunstwerk wordt dit opgenomen in de NEN-2767-4 decompositie van het kunstwerk.\
+      \ In deze decompositie worden verder geen \r\r\n                geometrieÃ«n\
+      \ vastgelegd.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/waterinrichtingselement
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Waterinrichtingselement
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/waterinrichtingselement
+  - name: waterinrichtingselement
+    description: "Een ruimtelijk object ter inrichting van het water. Objecten als\
+      \ meerpalen en betonning worden in dit objecttype geadministreerd. Daar waar\
+      \ het object onderdeel uitmaakt van een kunstwerk wordt dit opgenomen in de\
+      \ NEN-2767-4 decompositie van het kunstwerk. In deze decompositie worden verder\
+      \ geen                geometrieÃ«n vastgelegd.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/waterinrichtingselement
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Waterinrichtingselement
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/waterinrichtingselement
+  - name: waterloop
+    description: Terrein ingericht voor afvoer en berging van oppervlaktewater. BGT
+      kent alleen vlakken. Dit objecttype zal uitgefaseerd worden.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/waterloop
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/waterloop
+  - name: weg
+    description: De as van de verschillende wegen zoals verwerkt in de grootschalige
+      topografie
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/weg
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/weg
+  - name: wegdeel
+    description: "Kleinste functioneel onafhankelijk stuk van een NEN 3610 Weg met\
+      \ gelijkblijvende, homogene eigenschappenen relaties en primair bedoeld voor\
+      \ gebruik door weg-, spoor- en vliegverkeer te land.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/wegdeel
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Wegdeel
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/wegdeel
+  - name: wegdeelKruin
+    description: Lijngeometrie van de hoogstgelegen begrenzing van een kunstmatig
+      aangelegd en onderhouden helling.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/wegdeelKruin
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/WegdeekKruin
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/wegdeelKruin
+  - name: weginrichtingselement
+    description: Een ruimtelijk object dat dient voor de inrichting van de openbare
+      weg
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/weginrichtingselement
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Weginrichtingselement
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/weginrichtingselement
+  - name: weginrichtingselement
+    description: "Een ruimtelijk object dat dient voor de inrichting van de openbare\
+      \ weg. __LET OP:__ Voornamelijk bedoelt om Geleideconstructies te administreren.\
+      \ Een geleiderail of vangrail is een barriÃ¨re die naast wegen wordt geplaatst\
+      \ om te voorkomendat voertuigen de weg in zijdelingse richting verlaten, kantelen\
+      \ of de middenberm doorkruisen\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/weginrichtingselement
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Weginrichtingselement
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/weginrichtingselement
+  - name: weginrichtingselement
+    description: Een ruimtelijk object dat dient voor de inrichting van de openbare
+      weg.
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/weginrichtingselement
+    custom_properties:
+      skos_exact_match: https://definities.geostandaarden.nl/imgeo/id/begrip/Weginrichtingselement
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/weginrichtingselement
+  - name: wegvak
+    description: "Administratief afgebakend gedeelte van een weg waarbinnen de inspectiemetingen\
+      \ uitgevoerd worden.Een wegvak is doorgaands 100 meter en loopt in de meeste\
+      \ gevallen gelijk aan de wegindexering (hectometerpalen). In de breedte dient\
+      \ een wegvak alle wegdelen en ondersteunende wegdelen te omvatten.\r\r\n"
+    source_url: http://otl.noord-holland.nl/id/areaaldata/concept/wegvak
+    custom_properties:
+      source_url: http://otl.noord-holland.nl/id/areaaldata/concept/wegvak
