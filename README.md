@@ -22,6 +22,7 @@ Add functionality to a postgres ingestion script to match tables/columns to busi
 We have an ontology of our core assetmanagement information model, which is mapped to the National Base Registry of Topography (IMGeo/BGT)
 ![](images/thesaurus.png)
 ![](images/concept.PNG)
+![](images/concept_graph.PNG)
 
 Data is managed in our Postgis database and part of this data is provided to the national base registry, which is also available as knowledge graph:
 https://data.labs.kadaster.nl/kadaster/bgt
@@ -30,15 +31,25 @@ Terminology is mapped to database tables using SHACL, using a sh:target statemen
 
 Besides the mapping SHACL is also used to define the constraints for the data
 ```
+dprop:bak-BRONHOUDER a sh:PropertyShape ;
+    adshapes:areaaldataversie "4.2" ;
+    adshapes:begingeldigheid "2019-09-25"^^xsd:date ;
+    sh:class adwl:bronhouder ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:path adprop:BRONHOUDER .
+
+adprop:bak-CREATED_DATE a sh:PropertyShape ;
+    adshapes:areaaldataversie "4.2" ;
+    adshapes:begingeldigheid "2019-09-25"^^xsd:date ;
+    sh:datatype xsd:dateTime ;
+    sh:maxCount 1 ;
+    sh:path adprop:CREATED_DATE .
 
 ```
+In this snippet you can see that BRONHOUDER is required, whereas Created_date is optional (but can only occur once). as well as the datatype being a domainvalue for BRONHOUDER and a datetime field for Created_Date.
 
-So as an extra functionality I'm also writing a script to transform the SHACL constraints to great_expectations suites to enforce the constraints on database level.
+So as an extra functionality I'm also writing a script to transform the SHACL constraints to great_expectations suites to test the modelled constraints against the actual data. 
 
 ---
 
-[skos_2_glossary]
-
-[shacl_table_terms]
-
-[shacl_ge]

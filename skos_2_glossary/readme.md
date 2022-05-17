@@ -16,6 +16,9 @@ second step:
 ``` datahhub ingest -c business_glossary_to_datahub.yml ```
 
 ---
+result:
+![](../images/glossary-with-relations.png)
+---
 
 Potential improvements:
 - have the skos relations (to national vocabulary) in the documentation

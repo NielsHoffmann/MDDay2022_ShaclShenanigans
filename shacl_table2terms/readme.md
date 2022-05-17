@@ -47,6 +47,11 @@ adc:bak
 See the jupyter notebook for the code to perform the mapping between tables and terms in datahub.
 
 ---
+result:
+![](../images/enitities-with-terms.png)
+
+---
+
 issues:
 - for some reason mapping doesn't seem to work both ways all the time.
 so e.g. a table has a mapped term, but the term does not show it's related enitities
