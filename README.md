@@ -15,6 +15,14 @@ Add functionality to a postgres ingestion script to match tables/columns to busi
 
 - see [shacl_table2terms](shacl_table2terms) folder
 
+[extra:](shacl_2_ge)
+Convert SHACL constraints to Great Expectations validation suite.
+Our 'business knowledge' is for a larrge part encoded in shacl profiles.
+For different stages in the maturity of our datasets we have different profiles from ´lightweight' checking the basics, to full blown data quality requirements.
+It'd be nice to use these validations on the database and show the results in de metadata catalog.
+
+- see [shacl_2_ge](shacl_2_ge) folder (w.i.p.)
+
 ---
 
 ### Background
@@ -49,7 +57,7 @@ adprop:bak-CREATED_DATE a sh:PropertyShape ;
 ```
 In this snippet you can see that BRONHOUDER is required, whereas Created_date is optional (but can only occur once). as well as the datatype being a domainvalue for BRONHOUDER and a datetime field for Created_Date.
 
-So as an extra functionality I'm also writing a script to transform the SHACL constraints to great_expectations suites to test the modelled constraints against the actual data. 
+
 
 ---
 

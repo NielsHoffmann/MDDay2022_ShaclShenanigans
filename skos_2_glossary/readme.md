@@ -17,10 +17,15 @@ second step:
 
 ---
 result:
+
+![](../images/glossary-documentation.png)
 ![](../images/glossary-with-relations.png)
+![](../images/glossary-custom-properties.png)
+
 ---
 
 Potential improvements:
+- still a bit 'hacky' with hardcoded splits and mapping to a specific glossary...
 - have the skos relations (to national vocabulary) in the documentation
 - also import documentation from national vocabulary including images etc.
 
