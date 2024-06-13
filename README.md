@@ -1,6 +1,8 @@
 # Metadata Day 2022 - ShaclShenanigans
 Repository for metadata day 2022 - Niels Hoffmann
 
+- Demo on [Youtube](https://www.youtube.com/watch?v=yHISbiv-IDA)
+
 ### Governance as Code
 
 Business Glossaries, KPIs, and Metrics: governing the intersection of technical data + business logic through code
